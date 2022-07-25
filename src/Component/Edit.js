@@ -11,7 +11,7 @@ export default function Edit() {
 
 
   function handelchange() {
-    fetch("http://localhost:3001/edit", {
+    fetch("https://imagegallery2566.herokuapp.com/edit", {
       method: "PUT",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: name, url: url, details: details, _id: id })
@@ -30,7 +30,7 @@ export default function Edit() {
 
   useEffect(() => {
     function getdata() {
-      fetch(`http://localhost:3001/data/${id}`)
+      fetch(`https://imagegallery2566.herokuapp.com/data/${id}`)
         .then((data) => {
           return data.json();
         })

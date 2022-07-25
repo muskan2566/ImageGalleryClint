@@ -8,7 +8,7 @@ export default function Show() {
     const [num , setNum] = useState(0);
 
     function handelDelete(e){
-            fetch(`http://localhost:3001/delete/${e}`,{method:'DELETE'})
+            fetch(`https://imagegallery2566.herokuapp.com/delete/${e}`,{method:'DELETE'})
             .then((data)=>{
                 return data.json();
             }).then((result)=>{
@@ -19,7 +19,7 @@ export default function Show() {
 
     useEffect(() => {
         function getData() {
-            fetch("http://localhost:3001/show")
+            fetch("https://imagegallery2566.herokuapp.com/show")
                 .then((data) => {
                     return data.json();
                 }).then((result) => {

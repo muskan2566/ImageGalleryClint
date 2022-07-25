@@ -5,7 +5,7 @@ export default function SavetoDB() {
   return (
     <>
     <div className="w-25 mx-5">
-   <form action="http://localhost:3001/" method="post">
+   <form action="https://imagegallery2566.herokuapp.com/" method="post">
   <div className="mb-2">
     <label className="form-label">Name: </label>
     <input type="text" className="form-control" name="name"  required/>
