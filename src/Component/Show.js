@@ -17,6 +17,15 @@ export default function Show() {
             setNum(num+1);
     }
 
+    function handelchange(e){
+        fetch(`https://imagegallery2566.herokuapp.com/data/${e}`)
+        .then((data)=>{
+            return data.json();
+        }).then((result)=>{
+            console.log(result);
+        })
+    }
+
     useEffect(() => {
         function getData() {
             fetch("https://imagegallery2566.herokuapp.com/show")
@@ -42,7 +51,7 @@ export default function Show() {
                 imgData && imgData.map((e)=>{
                     return (
                     <div key={e._id} className="d-flex">
-                            <img src={e.url} height="200" width="200" alt=""/>
+                            <Link to={`/details/${e._id}`}><img src={e.url} height="200" width="200" alt=""/></Link>
                             <div>
                             <button className="mx-3 my-5" onClick={()=>{handelDelete(e._id)}}>Delete</button>
                             <button><Link to={`/edit/${e._id}`}>Edit</Link></button>
