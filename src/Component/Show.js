@@ -17,14 +17,6 @@ export default function Show() {
             setNum(num+1);
     }
 
-    function handelchange(e){
-        fetch(`https://imagegallery2566.herokuapp.com/data/${e}`)
-        .then((data)=>{
-            return data.json();
-        }).then((result)=>{
-            console.log(result);
-        })
-    }
 
     useEffect(() => {
         function getData() {
