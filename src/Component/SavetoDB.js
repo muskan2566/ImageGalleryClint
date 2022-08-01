@@ -10,7 +10,7 @@ export default function SavetoDB() {
           <h2>Add New Image</h2>
         </div>
         <div >
-          <form action="http://localhost:3001/" method="post">
+          <form action="https://imagegallery2566.herokuapp.com/" method="post">
             <div className="mb-2">
               <label className="form-label">Name: </label>
               <input type="text" className="form-control" name="name" required />
