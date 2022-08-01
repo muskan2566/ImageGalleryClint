@@ -49,26 +49,31 @@ export default function Edit() {
 
   return (
     <>
-      <div className="w-25 mx-5">
-
-        <div className="mb-2">
-          <label className="form-label">Name: </label>
-          <input type="text" className="form-control" name="name" value={name} onChange={(e) => { setname(e.target.value) }} required />
-
+    <div className='container d-flex justify-content-center w-100'>
+      <div className='d-flex flex-column w-50'>
+        <div>
+          <h1>Edit Form</h1>
         </div>
-        <div className="mb-2">
-          <label className="form-label">Url: </label>
-          <input type="text" className="form-control" name="url" value={url} onChange={(e) => { seturl(e.target.value) }} required />
+        <div className=" ">
+
+          <div className="mb-2">
+            <label className="form-label">Name: </label>
+            <input type="text" className="form-control" name="name" value={name} onChange={(e) => { setname(e.target.value) }} required />
+
+          </div>
+          <div className="mb-2">
+            <label className="form-label">Url: </label>
+            <input type="text" className="form-control" name="url" value={url} onChange={(e) => { seturl(e.target.value) }} required />
+          </div>
+
+          <div className="mb-2">
+            <label className="form-label">Details: </label>
+            <input type="text" className="form-control" name="details" value={details} onChange={(e) => { setdetails(e.target.value) }} required />
+          </div>
+
+          <button type="submit" className="btn btn-primary" onClick={() => { handelchange() }}>Submit</button>
+          </div>
         </div>
-
-        <div className="mb-2">
-          <label className="form-label">Details: </label>
-          <input type="text" className="form-control" name="details" value={details} onChange={(e) => { setdetails(e.target.value) }} required />
-        </div>
-
-        <button type="submit" className="btn btn-primary" onClick={() => { handelchange() }}>Submit</button>
-
-
       </div>
     </>
   )
